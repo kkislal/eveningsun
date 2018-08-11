@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,15 +14,26 @@
   <body>
     <header>
       <div class="navbar-fixed">
-        <nav class="black darken-4" role="navigation">
-          <div class="nav-wrapper center">
-            <a href="index2.html" class="brand-logo">Eveningsun Consulting</a>
-            <ul class="right sidenav" id="nav-mobile">
-              <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">arrow_back</i></a></li>
-            </ul>
-            <a class="left sidenav-trigger" href="#" data-target='nav-mobile'><i class="material-icons">menu</i></a>
+          <nav class="blue-grey darken-4" role="navigation">
+            <div class="container">
+            <div class="nav-wrapper">
+              <ul class="left sidenav" id="nav-mobile">
+                <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">arrow_back</i></a></li>
+              </ul>
+              <a class="left sidenav-trigger" href="#" data-target='nav-mobile'><i class="material-icons">menu</i></a>
+              <a href="/" class="brand-logo">Evening Sun Consulting</a>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-button btn" href="#" data-target="ddsolutions">Solutions<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/main/about">About Us</a></li>
+                <li><a href="/main/contact">Contact</a></li>
+              </ul>
+              <ul id="ddsolutions" class="dropdown-content blue-grey darken-4">
+                <li><a href="/main/factoring">Factoring Automation</a></li>
+                <li><a href="/main/consultancy">IT Consultancy</a></li>
+              </ul>
+            </div>
           </div>
-        </nav>
+          </nav>
       </div>
     </header>
 
