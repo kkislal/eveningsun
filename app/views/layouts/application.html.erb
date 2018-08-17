@@ -11,7 +11,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-controller="<%=controller.controller_name%>" data-action="<%=controller.action_name%>">
     <header>
       <div class="navbar-fixed">
           <nav class="blue-grey darken-4" role="navigation">

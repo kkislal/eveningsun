@@ -1,5 +1,8 @@
   var turboloadF = function() {
 
+    var vController = $('body').data('controller');
+    var vAction = $('body').data('action');
+
     $('.materialboxed').materialbox();
 
     $('.parallax').parallax();
@@ -19,6 +22,11 @@
       hover: true,
       coverTrigger: false,
     });
+
+//    if (vAction == 'contact') {
+//      $(".contact_main").css("background-image", "url('/images/contact2.jpg')");
+//    }
+
 
   };
 
