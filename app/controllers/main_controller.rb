@@ -10,4 +10,7 @@ class MainController < ApplicationController
 
   def consultancy
   end
+
+  def test
+  end
 end
