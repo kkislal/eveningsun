@@ -1,8 +1,11 @@
   var turboloadF = function() {
 
+    console.log( "Turbolings loaded" );
+
     var vController = $('body').data('controller');
     var vAction = $('body').data('action');
 
+    $('.sidenav').sidenav();
 
     $('.materialboxed').materialbox();
 
@@ -24,7 +27,6 @@
       coverTrigger: false,
     });
 
-    $('.sidenav').sidenav();
 
 //    if (vAction == 'contact') {
 //      $(".contact_main").css("background-image", "url('/images/contact2.jpg')");
