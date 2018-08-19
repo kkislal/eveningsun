@@ -10,7 +10,7 @@
 
     $('.slider').slider({
       interval: 4000,
-      //height: 500,
+      height: 500,
     });
 
     $('#head_slider').slider({
