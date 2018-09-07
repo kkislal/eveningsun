@@ -21,13 +21,24 @@
               <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <a href="/" class="brand-logo">Evening Sun Consulting</a>
               <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-button btn" href="#" data-target="ddsolutions">Solutions<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="/main/about">About Us</a></li>
-                <li><a href="/main/contact">Contact</a></li>
+                <li><a class="dropdown-button btn" href="#" data-target="ddsolutions"><%= t :nav_solutions %><i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/main/about"><%= t :nav_about %></a></li>
+                <li><a href="/main/contact"><%= t :nav_contact %></a></li>
+                <li>
+                  <% if session[:locale] == "tr" %>
+                    <%= link_to "/main/locale?locale=en" do %>
+                      <%= image_tag "/images/en.svg",:style => "vertical-align: middle;", :width => "25px;", :class => "responsive-img" %>
+                    <% end %>
+                  <% else %>
+                    <%= link_to "/main/locale?locale=tr" do %>
+                      <%= image_tag "/images/tr.svg",:style => "vertical-align: middle;", :width => "25px;", :class => "responsive-img" %>
+                    <% end %>
+                  <% end %>
+                </li>
               </ul>
               <ul id="ddsolutions" class="dropdown-content blue-grey darken-4">
-                <li><a href="/main/factoring">Factoring Automation</a></li>
-                <li><a href="/main/consultancy">IT Systems Consultancy</a></li>
+                <li><a href="/main/factoring"><%= t :nav_factoring %></a></li>
+                <li><a href="/main/consultancy"><%= t :nav_consulting %></a></li>
               </ul>
             </div>
           </div>
@@ -41,10 +52,10 @@
               <a href="/"><span class="white-text">Evening Sun Consulting</span></a>
             </div>
           </li>
-        <li><a href="/main/factoring">Factoring Automation</a></li>
-        <li><a href="/main/consultancy">IT Systems Consultancy</a></li>
-        <li><a href="/main/about">About Us</a></li>
-        <li><a href="/main/contact">Contact</a></li>
+        <li><a href="/main/factoring"><%= t :nav_factoring %></a></li>
+        <li><a href="/main/consultancy"><%= t :nav_consulting %></a></li>
+        <li><a href="/main/about"><%= t :nav_about %></a></li>
+        <li><a href="/main/contact"><%= t :nav_contact %></a></li>
       </ul>
 
     </header>
